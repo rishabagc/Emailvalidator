@@ -13,3 +13,6 @@
 
 ### start project: 
 `python manage.py runserver`
+
+### Email validator demo:
+[![Watch the video]](https://www.loom.com/share/ff32d81537184ddc9372db20fac20c26)
