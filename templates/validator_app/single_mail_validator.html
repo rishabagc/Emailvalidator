@@ -1,0 +1,33 @@
+{% extends "validator_app/dashboard.html" %}
+{% block content %}
+{% load static %}
+
+<h3>Single Email validator</h3>
+
+  {% for message in messages %}
+    <div class="{% if message.tags == 'success'%}alert alert-success{% else %} alert alert-danger{% endif %}" role="alert" id="successMessage">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message | safe }}
+    </div>
+  {% endfor %}
+
+
+  <form method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<script type="text/javascript">
+    $('#successMessage').delay(2000).fadeOut('slow');
+</script>
+
+{% endblock %}
+
+

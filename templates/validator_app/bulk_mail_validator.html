@@ -1,0 +1,13 @@
+{% extends "validator_app/dashboard.html" %}
+{% block content %}
+{% load static %}
+
+<h3>Bulk Email validator</h3>
+  <form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+ 	<label class="form-label" for="customFile">Upload your csv here.(<a href="{% url 'download_sample_csv' %}">Sample CSV</a>)</label>
+	<input type="file" class="form-control" id="customFile" accept=".csv" required="required" name="csv_data" />
+	<button type="submit" class="btn btn-primary" style="margin-top:10px">Get validate emails</button>
+</form>
+
+{% endblock %}
