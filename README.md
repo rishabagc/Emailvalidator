@@ -15,4 +15,4 @@
 `python manage.py runserver`
 
 ### Email validator demo:
-[![Watch the video]](https://www.loom.com/share/ff32d81537184ddc9372db20fac20c26)
+(https://s9.gifyu.com/images/ezgif.com-gif-maker88ca7786751b742e.gif)
